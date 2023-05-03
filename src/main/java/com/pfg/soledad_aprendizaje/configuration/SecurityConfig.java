@@ -46,7 +46,7 @@ public class SecurityConfig {
 		//@formatter:off
 		 http
 	        .authorizeHttpRequests()
-	        .requestMatchers("/login", "/logout", "/register", "/user/**").permitAll()
+	        .requestMatchers("/login", "/logout", "/register", "/user/**", "/").permitAll()
 	        .requestMatchers("**/swagger-ui.html","/index.html").permitAll()
 	        .requestMatchers("/", "/css/**", "/js/**", "/images/**").permitAll()
 	        .anyRequest().authenticated().and().httpBasic();

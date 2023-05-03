@@ -8,10 +8,10 @@
 		<version>3.0.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.pfg</groupId>
-	<artifactId>soledad_aprendizaje</artifactId>
+	<groupId>com.springboot3architecture</groupId>
+	<artifactId>demo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>soledad_aprendizaje</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
