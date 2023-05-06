@@ -18,8 +18,11 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @Configuration
 public class SecurityConfig {
 
-	@Value("${app.domain-front}")
-	private String domainFront;
+	@Value("${app.local-domain-front}")
+	private String localDomainFront;
+	
+	@Value("${app.remote-domain-front}")
+	private String remoteDomainFront;
 
 	@Autowired
 	private UserDetailsService userDetailsService;
@@ -61,7 +64,9 @@ public class SecurityConfig {
 		return new WebMvcConfigurer() {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/**").allowedOrigins(domainFront);
+				registry.addMapping("/**").allowedOrigins(localDomainFront);
+				registry.addMapping("/**").allowedOrigins(remoteDomainFront);
+			
 				registry.addMapping("/**").allowedMethods("POST", "PUT", "GET", "DELETE");
 			}
 		};

@@ -15,7 +15,8 @@ spring:
   password: root
 
 app:
-  domain-front: http://localhost:4200
+  local-domain-front: http://localhost:4200
+  remote-domain-front: https://angular-architecture.herokuapp.com/
   
 #Configuración del servidor (contexto, https, página de error)
 server:
